@@ -254,6 +254,16 @@ body{background:var(--w);color:var(--k);font-family:'Jost',sans-serif;font-weigh
 }
 .presse-vignette:hover img{transform:scale(1.04);}
 /* ── Responsive ──────────────────────────────────────────────── */
+/* Grille compétences 4 colonnes */
+.comp-cols-4{grid-template-columns:repeat(4,1fr);gap:44px;}
+@media(max-width:960px){
+  .comp-cols-4{grid-template-columns:repeat(2,1fr);gap:32px;}
+}
+@media(max-width:640px){
+  .comp-cols-4{grid-template-columns:1fr 1fr;gap:24px;}
+  .comp-list li{font-size:0.92rem;line-height:1.9;hyphens:none;word-break:normal;}
+  .comp-label{font-size:0.6rem;}
+}
 @media(max-width:960px){
   :root{--pad:28px;}
   .site-nav .nav-links{display:none;}
@@ -278,7 +288,7 @@ body{background:var(--w);color:var(--k);font-family:'Jost',sans-serif;font-weigh
   .hero-cta-wrap{margin-top:28px;}
   /* Éviter les mots seuls à la ligne */
   .hero-sub, .profil-body, .mc-desc, .distinctions-body,
-  .refs-confid-text, .cq, .comp-list li, .cs, .cl{
+  .refs-confid-text, .cq, .cs, .cl{
     word-break:normal;
     overflow-wrap:break-word;
     hyphens:auto;
@@ -415,7 +425,7 @@ body{background:var(--w);color:var(--k);font-family:'Jost',sans-serif;font-weigh
   <!-- Compétences -->
   <section id="competences-fr" class="comp-section">
     <div class="comp-head"><h2>Compétences</h2></div>
-    <div class="comp-cols" style="grid-template-columns:repeat(4,1fr);gap:44px;">
+    <div class="comp-cols comp-cols-4">
       <div>
         <span class="comp-label">Outils print</span>
         <ul class="comp-list">
